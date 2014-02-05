@@ -1,6 +1,10 @@
 {
   "name": "<%= _.slugify(appname) %>",
-  "description": "<%= _.slugify(description) %>",
+  "description": "<%= description %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-shell": "~0.6.4"
+  }
 }

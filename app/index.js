@@ -91,6 +91,7 @@ JekyllInuitGenerator.prototype.app = function app() {
   this.copy('config.rb', 'config.rb');
   this.copy('favicon.ico', 'favicon.ico');
   this.copy('gitignore', '.gitignore');
+  this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('index.html', 'index.html');
   this.copy('jshintrc', '.jshintrc');
   this.copy('README.md', 'README.md');
