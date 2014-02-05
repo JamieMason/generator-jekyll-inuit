@@ -87,7 +87,6 @@ JekyllInuitGenerator.prototype.app = function app() {
   this.template('_package.json', 'package.json');
 
   // straight copies of files
-  this.copy('_config.yml', '_config.yml');
   this.copy('config.rb', 'config.rb');
   this.copy('favicon.ico', 'favicon.ico');
   this.copy('gitignore', '.gitignore');
