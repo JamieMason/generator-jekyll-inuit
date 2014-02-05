@@ -1,0 +1,8 @@
+name: <%= _.slugify(appname) %>
+markdown: redcarpet
+pygments: true
+exclude: ['scss']
+author_name: <%= _.slugify(authorName) %>
+author_github: <%= _.slugify(authorGithub) %>
+author_twitter: <%= _.slugify(authorTwitter) %>
+author_email: <%= _.slugify(authorEmail) %>
