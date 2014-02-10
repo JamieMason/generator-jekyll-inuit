@@ -6,14 +6,22 @@ module.exports = function(grunt) {
       options: {
         stdout: true
       },
-      jekyll: {
-        command: 'jekyll build'
-      },
       inuit: {
         command: 'compass compile .'
+      },
+      jekyll: {
+        command: 'jekyll build'
       }
     },
     watch: {
+      inuit: {
+        files: [
+          'css/**/*.scss'
+        ],
+        tasks: [
+          'shell:inuit'
+        ]
+      },
       jekyll: {
         files: [
           '_posts/**/*.md',
@@ -21,14 +29,6 @@ module.exports = function(grunt) {
         ],
         tasks: [
           'shell:jekyll'
-        ]
-      },
-      inuit: {
-        files: [
-          'css/**/*.scss'
-        ],
-        tasks: [
-          'shell:inuit'
         ]
       }
     }
