@@ -1,27 +1,30 @@
 @charset "UTF-8";
 /*------------------------------------*\
     STYLE.CSS
+  ------------------------------------
+  .palm       : @media only screen and (max-width: 550px) {}
+  .lap        : @media only screen and (min-width: 481px) and (max-width: 1023px) {}
+  .lap-and-up : @media only screen and (min-width: 481px) {}
+  .portable   : @media only screen and (max-width: 1023px) {}
+  .desk       : @media only screen and (min-width: 1024px) {}
 \*------------------------------------*/
-/**
- *
- * sass --watch style.scss:style.min.css --style compressed
- *
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
 
-
-/**
- * Setup
- */
 @import "vars";
 @import "inuit.css/inuit";
-
-
-
-
 
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
 
+@import "app/base/main";
+@import "app/base/headings";
+@import "app/page-header";
+@import "pygments/github";
+
+.content {
+  padding: 1em;
+}
+  .content a,
+  .content a:visited {
+    color: $red;
+  }

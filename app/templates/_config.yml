@@ -3,6 +3,8 @@ markdown: redcarpet
 pygments: true
 exclude: ['scss']
 author_name: <%= authorName %>
-author_github: <%= authorGithub %>
-author_twitter: <%= authorTwitter %>
 author_email: <%= authorEmail %>
+username_github: <%= usernameGithub %>
+username_twitter: <%= usernameTwitter %>
+url_github: https://github.com/<%= usernameGithub %>
+url_twitter: https://twitter.com/<%= usernameTwitter %>

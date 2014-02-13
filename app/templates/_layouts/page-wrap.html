@@ -1,0 +1,41 @@
+---
+layout: document
+---
+
+<header class="page-head">
+  <a href="/" title="Return to homepage" class="site-logo">
+    {{ site.author_name }}
+  </a>
+</header>
+
+<div class="content">
+  <div class="grid">
+    <div class="grid__item lap-and-up-one-whole palm-one-whole desk-two-thirds">
+      {{ content }}
+    </div><!--
+    --><div class="grid__item lap-and-up-one-whole palm-one-whole desk-one-third">
+
+      <h2>About me</h2>
+      <p>I'm {{ site.author_name }}, I...</p>
+
+      <h2>Contact</h2>
+      <dl>
+        <dt>Twitter: <a href="{{ site.url_twitter }}">{{ site.username_twitter }}</a></dt>
+        <dd>...</dd>
+        <dt>Email: <a href="mailto:{{ site.author_email }}">{{ site.author_email }}</a></dt>
+        <dd>...</dd>
+      </dl>
+
+      <h2>Work</h2>
+      <dl>
+        <dt>GitHub: <a href="{{ site.url_github }}">{{ site.username_github }} on GitHub</a></dt>
+        <dd>...</dd>
+      </dl>
+
+    </div>
+  </div>
+</div>
+
+<!-- This is only required in development when using `grunt watch`
+<script src="http://localhost:35729/livereload.js"></script>
+-->

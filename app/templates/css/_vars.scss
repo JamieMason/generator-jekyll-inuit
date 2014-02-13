@@ -1,14 +1,13 @@
 /*------------------------------------*\
     VARS.SCSS
+  ------------------------------------
+  Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+  keep, simply redefine here. This means that if inuit.css, for example, sets
+  your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+  that variable in this file. inuit.css ignores its own variables in favour of
+  using your own, so you can completely modify how inuit.css works without ever
+  having to alter the framework itself.
 \*------------------------------------*/
-/**
- * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
- * keep, simply redefine here. This means that if inuit.css, for example, sets
- * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
- * that variable in this file. inuit.css ignores its own variables in favour of
- * using your own, so you can completely modify how inuit.css works without ever
- * having to alter the framework itself.
- */
 
 
 
@@ -16,48 +15,38 @@
 
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
+  ------------------------------------
+  All of inuit.css’ objects and abstractions are initially turned off by
+  default. This means that you start any project with as little as possible,
+  and introducing objects and abstractions is as simple as switching the
+  following variables to `true`.
 \*------------------------------------*/
-/**
- * All of inuit.css’ objects and abstractions are initially turned off by
- * default. This means that you start any project with as little as possible,
- * and introducing objects and abstractions is as simple as switching the
- * following variables to `true`.
- */
-$use-grids:         true;
-$use-flexbox:       false;
-$use-columns:       false;
-$use-nav:           true;
-$use-options:       false;
-$use-pagination:    false;
-$use-breadcrumb:    false;
-$use-media:         false;
-$use-marginalia:    false;
-$use-island:        false;
-$use-block-list:    false;
-$use-matrix:        false;
-$use-split:         false;
-$use-this-or-this:  false;
-$use-link-complex:  false;
-$use-flyout:        false;
-$use-arrows:        false;
-$use-sprite:        false;
-$use-icon-text:     false;
-$use-beautons:      false;
-$use-lozenges:      false;
-$use-rules:         false;
-$use-stats:         false;
-$use-greybox:       false;
 
+$use-arrows       : false;
+$use-beautons     : false;
+$use-block-list   : false;
+$use-breadcrumb   : false;
+$use-columns      : false;
+$use-flexbox      : false;
+$use-flyout       : false;
+$use-greybox      : false;
+$use-icon-text    : false;
+$use-island       : false;
+$use-link-complex : false;
+$use-lozenges     : false;
+$use-marginalia   : false;
+$use-matrix       : false;
+$use-media        : false;
+$use-options      : false;
+$use-pagination   : false;
+$use-rules        : false;
+$use-split        : false;
+$use-sprite       : false;
+$use-stats        : false;
+$use-this-or-this : false;
 
-
-
-
-/*------------------------------------*\
-    $OVERRIDES
-\*------------------------------------*/
-/**
- * Place any variables that should override inuit.css’ defaults here.
- */
+$use-grids        : true;
+$use-nav          : true;
 
 
 
@@ -65,7 +54,52 @@ $use-greybox:       false;
 
 /*------------------------------------*\
     $CUSTOM
+  ------------------------------------
+  Place any of your own variables that sit on top of inuit.css here.
 \*------------------------------------*/
-/**
- * Place any of your own variables that sit on top of inuit.css here.
- */
+
+$dark-grey          : #444;
+$red                : #C91F1D;
+$header-font-family : 'Paytone One', sans-serif;
+                      @import url("http://fonts.googleapis.com/css?family=Paytone+One");
+
+
+
+
+
+/*------------------------------------*\
+    $OVERRIDES
+  ------------------------------------
+  Place any variables that should override inuit.css’ defaults here.
+
+  $animation-name    : $english-quotes    : $responsive          : $palm-pull
+  $arrow             : $font-size         : $responsive-extra    : $palm-push
+  $arrow-border      : $from              : $state               : $portable-pull
+  $arrow-color       : $giga-size         : $to                  : $portable-push
+  $arrow-edge        : $global-border-box : $truncation-boundary : $property
+  $arrow-location    : $half-spacing-unit : $use-arrows          : $pull
+  $arrow-size        : $i                 : $use-beautons        : $push
+  $base-font-family  : $kilo-size         : $use-block-list      : $use-pagination
+  $base-font-size    : $lap-and-up-pull   : $use-breadcrumb      : $use-rules
+  $base-line-height  : $lap-and-up-push   : $use-columns         : $use-split
+  $base-spacing-unit : $lap-end           : $use-flexbox         : $use-sprite
+  $base-ui-color     : $lap-pull          : $use-flyout          : $use-stats
+  $border            : $lap-push          : $use-greybox         : $use-this-or-this
+  $border-color      : $lap-start         : $use-grids           : $value
+  $brand-color       : $line-height       : $use-icon-text
+  $brand-face        : $line-height-ratio : $use-island
+  $brand-round       : $media-query       : $use-link-complex
+  $close-quote       : $mega-size         : $use-lozenges
+  $debug-mode        : $micro-size        : $use-marginalia
+  $desk-pull         : $milli-size        : $use-matrix
+  $desk-push         : $namespace         : $use-media
+  $desk-start        : $open-quote        : $use-nav
+  $desk-wide-start   : $palm-end          : $use-options
+\*------------------------------------*/
+
+$base-font-family : "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$base-font-size   : 20px;
+$base-line-height : 28px;
+$base-ui-color    : $dark-grey;
+$base-text-color  : $dark-grey;
+$beta-ui-color    : #FFF;

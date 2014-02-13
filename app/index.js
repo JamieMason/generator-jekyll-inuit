@@ -39,12 +39,12 @@ JekyllInuitGenerator.prototype.askFor = function askFor() {
     default: ''
   }, {
     type: 'input',
-    name: 'authorGithub',
+    name: 'usernameGithub',
     message: 'What is your GitHub username?',
     default: ''
   }, {
     type: 'input',
-    name: 'authorTwitter',
+    name: 'usernameTwitter',
     message: 'What is your twitter handle?',
     default: ''
   }, {
@@ -68,8 +68,8 @@ JekyllInuitGenerator.prototype.askFor = function askFor() {
     this.appname = props.appname;
     this.description = props.description;
     this.authorName = props.authorName;
-    this.authorGithub = props.authorGithub;
-    this.authorTwitter = props.authorTwitter;
+    this.usernameGithub = props.usernameGithub;
+    this.usernameTwitter = props.usernameTwitter;
     this.authorEmail = props.authorEmail;
 
     cb();
@@ -83,7 +83,7 @@ JekyllInuitGenerator.prototype.app = function app() {
   this.directory('css', 'css');
 
   // interpolated file contents
-  this.template('_config.yml', 'config.yml');
+  this.template('_config.yml', '_config.yml');
   this.template('_package.json', 'package.json');
 
   // straight copies of files

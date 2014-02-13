@@ -2,6 +2,7 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+
     shell: {
       options: {
         stdout: true
@@ -13,7 +14,21 @@ module.exports = function(grunt) {
         command: 'jekyll build'
       }
     },
+
     watch: {
+      options: {
+        livereload: true
+      },
+      precompilers: {
+        files: [
+          '<%= watch.inuit.files %>',
+          '<%= watch.jekyll.files %>'
+        ],
+        tasks: [
+          'shell:inuit',
+          'shell:jekyll'
+        ]
+      },
       inuit: {
         files: [
           'css/**/*.scss'
@@ -24,14 +39,15 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
-          '_posts/**/*.md',
-          '_layouts/**/*.html'
+          'index.{md,html}',
+          '{_includes,_layouts,_posts}/**/*.{md,html}'
         ],
         tasks: [
           'shell:jekyll'
         ]
       }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-shell');
