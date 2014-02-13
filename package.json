@@ -1,6 +1,6 @@
 {
   "name": "generator-jekyll-inuit",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A Jekyll Website with Inuit.css generator for Yeoman",
   "keywords": [
     "yeoman-generator",
